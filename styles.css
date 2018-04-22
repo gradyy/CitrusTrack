@@ -1,5 +1,5 @@
-body {
-    overflow: hidden;
+::-webkit-scrollbar {
+    display: none;
 }
 .box {
     background-color: #b3c2bf;
@@ -72,6 +72,9 @@ body {
     background-color: transparent;
     text-decoration: none;
     color: white;
+}
+#ambient {
+    float: right;
 }
 
 .mascot {
