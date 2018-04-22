@@ -32,19 +32,6 @@ function createTask(){
   button.id = "task" + taskName;
   button.innerText = taskName;
   newTask.appendTo(taskTable);
-  /*  
-  var task = document.createElement('tr');
-  task.id = taskTable.id;
-  var a = document.createElement("a");
-  a.href = "#" + taskName;
-  task.appendChild(a);
-  var button = document.createElement("button");
-  button.id = "task" + taskName;
-  button.className = "animated fadeInUp btn btn-2 btn-2c";
-  button.innerText = taskName;
-  a.appendChild(button);
-  taskTable.appendChild(task);
-  */
   createTaskDiv(taskName, timeStr);
 }
 
