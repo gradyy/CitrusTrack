@@ -1,9 +1,15 @@
 body {
-
+    overflow: hidden;
 }
 .box {
     background-color: #b3c2bf;
     color: #dae7d6;
+}
+.stuff {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .header {
     padding-top: 0px;
@@ -11,6 +17,13 @@ body {
     text-align: center;
     color: #e9ece5;
     font-size:7em;
+}
+.mountains {
+    padding-top: 10em;
+    width: 20%
+    height: 20%;
+    max-width: 100vw;
+    align-items: center;
 }
 .topnav .container {
     position: absolute;
@@ -84,7 +97,7 @@ body {
     width: 100%;
 }
 
-.overlay {
+.overlay{
     position: fixed;
     top: 0;
     bottom: 0;
@@ -99,19 +112,35 @@ body {
     visibility: visible;
     opacity: 1;
 }
+
+#new {
+    font-family: 'Maven Pro', sans-serif;
+    color: #e9ece5;
+}
+
+#newHeader {
+    font-family: 'Maven Pro', sans-serif;
+    color: #e9ece5;
+    font-size: 1.5em;
+    padding-bottom: 0px;
+    padding-top: 40px;
+    margin: 0px;
+}
+
 .popup {
     margin: 70px auto;
-      padding: 20px;
+      padding: 0px;
       background: #e9ece5;
       border-radius: 5px;
       width: 50%;
       position: relative;
       transition: all 5s ease-in-out;
 }
-.popup h2 {
+.popup h2 #newHeader{
   margin-top: 0;
   color: #3b3a36;
   font-family: 'Maven Pro', sans-serif;
+  font-size:1em;
 }
 .popup .close {
   position: absolute;
@@ -140,10 +169,113 @@ body {
     width: 70%;
   }
 }
-
+*:focus {
+    outline: none;
+}
 .taskName {
-    width: 70%;
+    padding-top: 10px;
+    font-family: 'Maven Pro', sans-serif;
+    width: 95%;
     background-color: transparent;
     border-color: transparent;
-    font-size: 1em;
+    font-size: 2em;
+}
+.taskTime {
+    text-align: center;
+    padding-top: 15spx;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: 'Maven Pro', sans-serif;
+    width: 13%;
+    background-color: transparent;
+    border-color: transparent;
+    font-size: 2em;
+    margin: auto;
+}
+.confirm1 {
+    text-align: left;
+    padding-left: 5em;
+    float: left;
+    padding-bottom: 3em;
+}
+.confirm2 {
+    text-align: right;
+    align-self: right;
+    padding-right: 5em;
+    float: right;
+    padding-bottom: 3em;
+}
+
+.radial-timer {
+  overflow: hidden;
+  height: 144px;
+  width: 144px;
+  position: relative;
+  margin: auto;
+}
+.radial-timer .radial-timer-half {
+  height: 144px;
+  width: 72px;
+  border-radius: 72px 0 0 72px;
+  background: #c0dfd9;
+  position: absolute;
+}
+.radial-timer .radial-timer-half:nth-of-type(2) {
+  z-index: 99999999;
+  -webkit-transform-origin: center right;
+  -webkit-transform: rotate(180deg);
+}
+.radial-timer .radial-timer-half:before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  height: 126px;
+  width: 63px;
+  border-radius: 67.5px 0 0 67.5px;
+  background: #e9ece5;
+}
+.radial-timer .radial-timer-half:after {
+  content: "";
+  position: absolute;
+  background: #e9ece5;
+  height: 288px;
+  width: 216px;
+  left: -144px;
+  top: -72px;
+  -webkit-transform-origin: center right;
+}
+.radial-timer.s-animate {
+  -webkit-transform-origin: center right;
+}
+.radial-timer.s-animate .radial-timer-half:nth-of-type(1):after {
+  -webkit-animation: rotateLeftMask 10s infinite linear;
+}
+.radial-timer.s-animate .radial-timer-half:nth-of-type(2):after {
+  -webkit-animation: rotateRightMask 10s infinite linear;
+}
+
+@-webkit-keyframes rotateLeftMask {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+  }
+}
+@-webkit-keyframes rotateRightMask {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+    visibility: hidden;
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+    visibility: hidden;
+  }
 }

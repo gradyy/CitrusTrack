@@ -11,6 +11,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="buttoncss/css/component.css">
     <link rel="stylesheet" type="text/css" href="buttoncss/css/default.css">
+    <script src="buttoncss/js/time.js"></script>
   </head>
   <body class="box">
       <div class="topnav container">
@@ -18,31 +19,69 @@
           <a class="detail" href="#" >About</a>
           <a class="detail" target="_blank" href="https://github.com/gradyy/citrustrack">GitHub</a>
     </div>
+        <div class="mascot">
+            <img id="mascot" class="animated fadeInUp" align="middle" src="indexImg/bear.png">
+        </div>
 
-    <div class="mascot">
-        <img id="mascot" align="middle" src="indexImg/bear.png">
-    </div>
+        <div id="taskList">
+            <table id="taskList">
+                <tr id="taskList">
+                    <td><a href="#exist"><button id="taskExist" class="animated fadeInUp btn btn-2 btn-2c" style="animation-delay: .75s;">Take class notes</button></a></td>
+                </tr>
+                <tr id="taskList">
+                    <td><a href="#new"><button id="taskCreate" class="animated fadeInUp btn btn-2 btn-2c" style="animation-delay: 1.5s;">Create New Task</button></a></td>
+                </tr>
+            </table>
+            <div id="new" class="overlay">
+                <h2 id="newHeader">Create New Task</h2>
+                <p>what's next?</p>
+    	        <div class="popup">
+    		        <a class="close" href="#">&times;</a>
+    		        <div class="content">
+    			        <form>
+                            <p><input class="taskName" type="text" placeholder="Remind me to..."/>
+                        </form>
+                        <br></br>
+                        <p>How much time do you need?<p>
+                        <form>
+                            <p><input class="taskTime" type="text" placeholder="--"/>HOUR(S)<input class="taskTime" type="text" placeholder="--"/>MIN(S)<p>
+                        </form>
+                        <br></br>
+                        <table style="text-align:center; width:100%">
+                            <tr>
+                                <td class="animated fadeInDown confirm1"><img src="indexImg/iconaddgreen.png">confirm</td>
+                                <td class="animated fadeInDown confirm2"><img src="indexImg/iconremovered.png">cancel</td>
+                            </tr>
+                        </table>
+    		        </div>
+    	        </div>
+            </div>
 
-    <div id="taskList">
-        <table id="taskList">
-            <tr id="taskList">
-                <td><button id="taskExist" class="btn btn-2 btn-2c">Existing Task Popup Tester</button></td>
-            </tr>
-            <tr id="taskList">
-                <td><a href="#new"><button id="taskCreate" class="btn btn-2 btn-2c">Create New Task</button></a></td>
-            </tr>
-        </table>
-        <div id="new" class="overlay">
-	        <div class="popup">
-		        <h2>Create New Task</h2>
-		        <a class="close" href="#">&times;</a>
-		        <div class="content">
-			        <form>
-                        <p><input class="taskName" type="text" placeholder="I will..."/>
-                    </form>
-		        </div>
-	        </div>
+            <div id="exist" class="overlay">
+                <h1 id="newHeader">Take Class Notes</h1>
+                <p>you can do it!</p>
+    	        <div class="popup">
+    		        <a class="close" href="#">&times;</a>
+    		        <div class="content">
+                        <br></br>
+                        <p>You set Class Notes for 30 min.</p>
+                        <br></br>
+                        <div class="radial-timer s-animate">
+                          <div class="radial-timer-half"></div>
+                          <div class="radial-timer-half"></div>
+                        </div>
+                        <br></br>
+                        <table style="text-align:center; width:100%">
+                            <tr>
+                                <td class="animated fadeInDown confirm1"><img src="indexImg/greenbell.png">pause</td>
+                                <td class="animated fadeInDown confirm2"><img src="indexImg/redarrow.png">quit</td>
+                            </tr>
+                        </table>
+    	            </div>
+            </div>
         </div>
     </div>
+    </div>
+
   </body>
 </html>
