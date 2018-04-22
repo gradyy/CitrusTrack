@@ -1,0 +1,92 @@
+body {
+    overflow: hidden;
+}
+#title {
+    font-family: 'Maven Pro', sans-serif;
+    position: absolute;
+    top: 15%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    height: 20%;
+    font-size: 5em;
+}
+#wow {
+    position: absolute;
+    top: 60%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    height: 20%;
+    font-size: 1.15em;
+    text-align: right;
+    padding-right: 80px;
+}
+.box {
+    background-color: #b3c2bf;
+    color: #dae7d6;
+}
+.header {
+    padding-top: 0px;
+    font-family: 'Maven Pro', sans-serif;
+    text-align: center;
+    color: #e9ece5;
+    font-size:7em;
+}
+.topnav .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 20%;
+}
+
+.topnav {
+    background-color: transparent;
+    font-family: 'Maven Pro', sans-serif;
+    overflow: hidden;
+    height: 20px;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    position: relative;
+    float: left;
+    color: #e9ece5;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.topnav a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  border-bottom: 2px solid #e9ece5;
+  transition: 0.4s;
+}
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: transparent;
+    color: #e9ece5;
+    text-decoration: none;
+}
+.topnav a:hover:after {
+  width: 100%;
+}
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: transparent;
+    text-decoration: none;
+    color: white;
+}
+#mascot {
+    float: bottomleft;
+    max-width: 40%;
+    max-height:40%;
+}
+
+p {
+    font-family: 'Maven Pro', sans-serif;
+    color: #e9ece5;
+}
