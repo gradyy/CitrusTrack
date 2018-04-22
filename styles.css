@@ -73,6 +73,77 @@ body {
 
 }
 
-#task {
+#taskExist {
     align-items: center;
+}
+#taskCreate {
+    align-items: center;
+}
+#taskList {
+    text-align: center;
+    width: 100%;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+.popup {
+    margin: 70px auto;
+      padding: 20px;
+      background: #e9ece5;
+      border-radius: 5px;
+      width: 50%;
+      position: relative;
+      transition: all 5s ease-in-out;
+}
+.popup h2 {
+  margin-top: 0;
+  color: #3b3a36;
+  font-family: 'Maven Pro', sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #3b3a36;
+}
+.popup .close:hover {
+  color: #333;
+}
+.popup .content {
+  max-height: 70%;
+  overflow: auto;
+  color: #3b3a36;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
+
+.taskName {
+    width: 70%;
+    background-color: transparent;
+    border-color: transparent;
+    font-size: 1em;
 }

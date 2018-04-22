@@ -23,8 +23,26 @@
         <img id="mascot" align="middle" src="indexImg/bear.png">
     </div>
 
-    <div class="taskList" style="text-align:center;">
-        <button id="task" class="btn btn-2 btn-2c">task #1</button>
+    <div id="taskList">
+        <table id="taskList">
+            <tr id="taskList">
+                <td><button id="taskExist" class="btn btn-2 btn-2c">Existing Task Popup Tester</button></td>
+            </tr>
+            <tr id="taskList">
+                <td><a href="#new"><button id="taskCreate" class="btn btn-2 btn-2c">Create New Task</button></a></td>
+            </tr>
+        </table>
+        <div id="new" class="overlay">
+	        <div class="popup">
+		        <h2>Create New Task</h2>
+		        <a class="close" href="#">&times;</a>
+		        <div class="content">
+			        <form>
+                        <p><input class="taskName" type="text" placeholder="I will..."/>
+                    </form>
+		        </div>
+	        </div>
+        </div>
     </div>
   </body>
 </html>
